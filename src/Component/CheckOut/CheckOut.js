@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import { useContext } from 'react';
 import { UserContext } from '../../App';
-
+import CheckProduct from './CheckProduct';
 const CheckOut = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
@@ -25,8 +25,7 @@ const CheckOut = () => {
         <div>
            <ul>
                {
-                   order.map(or => 
-                   <li>{or.price}</li>)
+                   order.map(order => <CheckProduct order={order}></CheckProduct>)
                }
            </ul>
         </div>
