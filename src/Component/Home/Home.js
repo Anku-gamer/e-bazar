@@ -15,6 +15,11 @@ const Home = () => {
 
     return (
         <div style={{ paddingRight: '5rem' }} className="homeStyle">
+            {
+                products.length === 0 && <div class="spinner-grow" role="status">
+                    <span class="sr-only">Loading</span>
+                </div>
+            }
             <div style={{ marginBottom: '1rem' }} className="row">
                 {
                     products.map(product => <Product product={product} ></Product>)
