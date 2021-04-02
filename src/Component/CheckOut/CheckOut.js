@@ -10,7 +10,7 @@ const CheckOut = () => {
     const [order, setOrder] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:5055/order?email=${loggedInUser.email}`, {
+        fetch(`https://glacial-reaches-64415.herokuapp.com/order?email=${loggedInUser.email}`, {
             method: "GET",
             headers: { 'Content-Type': 'application/json' }
         })

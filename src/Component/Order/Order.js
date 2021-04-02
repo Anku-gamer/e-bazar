@@ -14,7 +14,7 @@ const Order = () => {
         const orderDetails = { user: loggedInUser.displayName, email: loggedInUser.email, ...product, orderTime: new Date()}
         console.log(orderDetails);
     
-        fetch('http://localhost:5055/addOrders', {
+        fetch('https://glacial-reaches-64415.herokuapp.com/addOrders', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json'},
             body: JSON.stringify(orderDetails)
@@ -27,7 +27,7 @@ const Order = () => {
     }
     
     useEffect(() => {
-        fetch(`http://localhost:5055/product/${id}`)
+        fetch(`https://glacial-reaches-64415.herokuapp.com/product/${id}`)
         .then(res => res.json())
         .then(data => setProduct(data));
     },[id])

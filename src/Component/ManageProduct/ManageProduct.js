@@ -7,7 +7,7 @@ import Delete from '../Delete/Delete';
 const ManageProduct = () => {
     const [products, setProducts] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5055/productManage')
+        fetch('https://glacial-reaches-64415.herokuapp.com/productManage')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, [])
