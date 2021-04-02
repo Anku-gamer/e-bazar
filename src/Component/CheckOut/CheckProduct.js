@@ -9,6 +9,7 @@ const CheckProduct = ({order}) => {
                     <tr>
                         <th scope="col">Product</th>
                        <th scope="col">Price</th>
+                       <th scope="col">Email</th>
                        <th scope="col">Time</th>
                     </tr>
                 </thead>
@@ -16,6 +17,7 @@ const CheckProduct = ({order}) => {
                     <tr>
                         <td>{order.name}</td>
                         <td>{order.price}</td>
+                        <td>{order.email}</td>
                         <td>{order.orderTime}</td>
                     </tr>
                 </tbody>
